@@ -1,4 +1,4 @@
-package com.example.customerprofile;
+package com.vmware.tanzu.tap.accelerator.customerprofile;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

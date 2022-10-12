@@ -1,12 +1,12 @@
-package com.example.customerprofile.data;
+package com.vmware.tanzu.tap.accelerator.customerprofile.data;
 
-import com.example.customerprofile.domain.NewCustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.NewCustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.TestData;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static com.example.customerprofile.domain.TestData.testNewCustomerProfile;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
@@ -18,7 +18,7 @@ class CustomerProfileRepositoryTest {
 
     @Test
 	void shouldPersistCustomerProfile() {
-		NewCustomerProfile newCustomerProfile = testNewCustomerProfile();
+		NewCustomerProfile newCustomerProfile = TestData.testNewCustomerProfile();
 
 		var customerProfile = subject.create(newCustomerProfile);
 		var actual = subject.findById(customerProfile.id());

@@ -1,7 +1,8 @@
-package com.example.customerprofile.api;
+package com.vmware.tanzu.tap.accelerator.customerprofile.api;
 
-import com.example.customerprofile.domain.CustomerProfileService;
-import com.example.customerprofile.domain.NewCustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.CustomerProfileService;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.NewCustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.TestData;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -12,7 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Optional;
 
-import static com.example.customerprofile.domain.TestData.testCustomerProfile;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
@@ -35,7 +35,7 @@ class CustomerProfileControllerTest {
 
         @Test
         void shouldDelegateToService() throws Exception {
-            when(service.create(any())).thenReturn(testCustomerProfile());
+            when(service.create(any())).thenReturn(TestData.testCustomerProfile());
 
             mockMvc.perform(post("/api/customer-profiles")
                             .contentType(APPLICATION_JSON)
@@ -76,7 +76,7 @@ class CustomerProfileControllerTest {
 
         @Test
         void shouldDelegateToService() throws Exception {
-            when(service.getById(any())).thenReturn(Optional.of(testCustomerProfile()));
+            when(service.getById(any())).thenReturn(Optional.of(TestData.testCustomerProfile()));
 
             mockMvc.perform(get("/api/customer-profiles/123")
                             .accept(APPLICATION_JSON))

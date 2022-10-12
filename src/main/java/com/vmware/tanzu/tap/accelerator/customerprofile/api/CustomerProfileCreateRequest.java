@@ -1,4 +1,4 @@
-package com.example.customerprofile.api;
+package com.vmware.tanzu.tap.accelerator.customerprofile.api;
 
 import javax.validation.constraints.NotBlank;
 

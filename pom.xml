@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.example</groupId>
+    <groupId>com.vmware.tanzu.tap.accelerator</groupId>
     <artifactId>customer-profile</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 

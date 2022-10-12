@@ -1,4 +1,4 @@
-package com.example.customerprofile.domain;
+package com.vmware.tanzu.tap.accelerator.customerprofile.domain;
 
 import javax.validation.constraints.NotBlank;
 

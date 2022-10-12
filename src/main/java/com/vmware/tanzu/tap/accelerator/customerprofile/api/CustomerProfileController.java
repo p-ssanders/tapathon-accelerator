@@ -1,8 +1,8 @@
-package com.example.customerprofile.api;
+package com.vmware.tanzu.tap.accelerator.customerprofile.api;
 
-import com.example.customerprofile.domain.CustomerProfile;
-import com.example.customerprofile.domain.CustomerProfileService;
-import com.example.customerprofile.domain.NewCustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.CustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.CustomerProfileService;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.NewCustomerProfile;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.headers.Header;

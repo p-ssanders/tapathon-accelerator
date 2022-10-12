@@ -1,6 +1,6 @@
-package com.example.customerprofile.domain;
+package com.vmware.tanzu.tap.accelerator.customerprofile.domain;
 
-import com.example.customerprofile.data.CustomerProfileRepository;
+import com.vmware.tanzu.tap.accelerator.customerprofile.data.CustomerProfileRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -9,8 +9,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static com.example.customerprofile.domain.TestData.testCustomerProfile;
-import static com.example.customerprofile.domain.TestData.testNewCustomerProfile;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
@@ -27,8 +25,8 @@ class CustomerProfileServiceTest {
 
     @Test
     void shouldDelegateToRepositoryToPersistProfile() {
-        NewCustomerProfile newCustomerProfile = testNewCustomerProfile();
-        CustomerProfile customerProfile = testCustomerProfile();
+        NewCustomerProfile newCustomerProfile = TestData.testNewCustomerProfile();
+        CustomerProfile customerProfile = TestData.testCustomerProfile();
         when(repository.create(any())).thenReturn(customerProfile);
 
         var result = subject.create(newCustomerProfile);
@@ -39,7 +37,7 @@ class CustomerProfileServiceTest {
 
     @Test
     void shouldDelegateToRepositoryToRetrieveProfile() {
-        var optionalCustomerProfile = Optional.of(testCustomerProfile());
+        var optionalCustomerProfile = Optional.of(TestData.testCustomerProfile());
         when(repository.findById(any())).thenReturn(optionalCustomerProfile);
 
         var result = subject.getById(123L);

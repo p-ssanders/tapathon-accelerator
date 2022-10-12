@@ -1,4 +1,4 @@
-package com.example.customerprofile;
+package com.vmware.tanzu.tap.accelerator.customerprofile;
 
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;

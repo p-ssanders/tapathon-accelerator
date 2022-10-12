@@ -1,7 +1,7 @@
-package com.example.customerprofile.data;
+package com.vmware.tanzu.tap.accelerator.customerprofile.data;
 
-import com.example.customerprofile.domain.CustomerProfile;
-import com.example.customerprofile.domain.NewCustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.CustomerProfile;
+import com.vmware.tanzu.tap.accelerator.customerprofile.domain.NewCustomerProfile;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;

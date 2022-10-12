@@ -1,4 +1,4 @@
-package com.example.customerprofile.data;
+package com.vmware.tanzu.tap.accelerator.customerprofile.data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

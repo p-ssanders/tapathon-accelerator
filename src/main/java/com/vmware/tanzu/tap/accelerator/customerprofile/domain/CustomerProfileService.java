@@ -1,6 +1,6 @@
-package com.example.customerprofile.domain;
+package com.vmware.tanzu.tap.accelerator.customerprofile.domain;
 
-import com.example.customerprofile.data.CustomerProfileRepository;
+import com.vmware.tanzu.tap.accelerator.customerprofile.data.CustomerProfileRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
